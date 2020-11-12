@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap');
+
+body {
+	background-color: black;
+	text-align: center;
+}
+
+h1, p, label {
+	color: white;
+}
+
+h1 {
+	font-family: 'Goldman';
+	font-size: 64px;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+p {
+	font-family: 'Oswald', sans-serif;
+}
+
+.tier-div {
+	display: grid;
+	height: 90%;
+	width: 80%;
+	margin: auto;
+	grid-template-columns: 33% 34% 33%
+	justify-content: center;
+	overflow: hidden;
+}
+
+.tierlist {
+	height: 100%;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 2px white solid;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.tierlist:first-child {
+	grid-column: 1;
+}
+
+.tierlist:last-child {
+	grid-column: 3;
+}
+
+.compare-menu {
+	grid-column: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 2px white solid;
+	align-self: center;
+	height: 50%;
+	overflow: hidden;
+	width: 80%;
+	margin: auto;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+label {
+	display: block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 32px;
+}
+
+input[type="text"] {
+	display: block;
+	margin: auto;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px white solid;
+	font-family: 'Oswald', sans-serif;
+	font-size: 32px;
+	color: white;
+	outline: none;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+button, input[type="submit"] {
+	background-color: transparent;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	font-size: 32px;
+}
+
+button:focus, input[type="submit"]:focus {
+	outline: none;
+}
+
+#compare-button {
+	margin-top: 15px;
+	align-self: center;
+}
+
+.tier-card {
+	display: grid;
+	width: 90%;
+	height: 150px;
+	margin: auto;
+	margin-top: 15px;
+	grid-template-columns: 40% 60%;
+	border: 2px white solid;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.tier-card span:first-child {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	grid-column: 1;
+}
+
+.tier-card p {
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
