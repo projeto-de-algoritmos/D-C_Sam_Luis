@@ -27,7 +27,7 @@ p {
 	height: 90%;
 	width: 80%;
 	margin: auto;
-	grid-template-columns: 33% 34% 33%
+	grid-template-columns: 33% 34% 33%;
 	justify-content: center;
 	overflow: hidden;
 }
