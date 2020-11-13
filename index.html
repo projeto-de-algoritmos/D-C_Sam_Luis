@@ -1,38 +1,42 @@
 <html>
-	<head>
-		<title>Tier List Comparison</title>
-		<link rel="stylesheet" href="css-reset.css">
-		<link rel="stylesheet" href="stylesheet.css">
-		<script src="src/inversionCounting.js"></script>
-		<script src="src/jquery-3.5.1.min.js"></script>
-		<script src="src/jquery-ui.min.js"></script>
-		<script src="src/main.js"></script>
-		<script src="src/dragAndDrop.js"></script>
-	</head>
+    <head>
+        <title>Tier List Comparison</title>
+        <link rel="stylesheet" href="css-reset.css">
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="src/inversionCounting.js"></script>
+        <script src="src/jquery-3.5.1.min.js"></script>
+        <script src="src/jquery-ui.min.js"></script>
+        <script src="src/main.js"></script>
+        <script src="src/dragAndDrop.js"></script>
+    </head>
 
-	<body>
-		<h1>Tier List Comparator</h1>
-		
-		<div class="tier-div">
-			<div class="tierlist" id="tierlist">
-			</div>
-			
-			<div class="compare-menu">
-				<form id="form">
-					<label for="title">Title</label>
-					<input type="text" name="title" id="title">
-					
-					<label for="url">Image URL</label>
-					<input type="text" name="url" id="url">
-					
-					<input type="submit">
-				</form>
-				
-				<button id="compare-button" onclick="compare()">Compare</button>
-			</div>
-			
-			<div class="tierlist tierlist2" id="tierlist">
-			</div>
-		</div>
-	</body>
+    <body>
+        <h1>Tier List Comparator</h1>
+        
+        <div class="tier-div">
+            <div class="tierlist" id="tierlist">
+            </div>
+            
+            <div class="menu-container">
+                <span class="result"></span>
+                
+                <div class="compare-menu">
+                    <form id="form">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" id="title">
+                        
+                        <label for="url">Image URL</label>
+                        <input type="text" name="url" id="url">
+                        
+                        <input type="submit">
+                    </form>
+                    
+                    <button id="compare-button" onclick="compare()">Compare</button>
+                </div>
+            </div>
+            
+            <div class="tierlist tierlist2" id="tierlist">
+            </div>
+        </div>
+    </body>
 </html>
