@@ -150,3 +150,26 @@ button:focus, input[type="submit"]:focus {
 	-webkit-transform: scale(2);
 	-ms-transform: scale(2);
 }
+
+.ui-sortable-helper {
+	transition: none !important;
+	animation: pulse 0.4s alternate infinite;
+  }
+  
+  .sortable-placeholder {
+	height: 60px;
+	width: 5px;
+	border-left: 2px solid #4999DA; 
+	margin: 0 0 0.75rem 0;
+	position: relative;
+	z-index: 6;
+  }
+  
+  @keyframes pulse {
+	100% { transform: scale(1.1); } 
+  }
+  
+  .cloned-slides .tier-card{
+	position: absolute;
+	z-index: 1;
+}
