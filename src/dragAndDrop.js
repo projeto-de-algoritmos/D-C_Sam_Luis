@@ -1,13 +1,13 @@
 function setupDragAndDrop(curId) {
-    $(".tierlist").sortable({
+    // $(".tierlist").sortable({
 
-        axis: "y",
-        revert: true,
-        scroll: false,
-        placeholder: "sortable-placeholder",
-        cursor: "move"
+    //     axis: "y",
+    //     revert: true,
+    //     scroll: false,
+    //     placeholder: "sortable-placeholder",
+    //     cursor: "move"
 
-    });
+    // });
 
     $(".tier-card").each(function (i) {
         var item = $(this);
@@ -83,18 +83,21 @@ function setupDragAndDrop(curId) {
               return $(el)
             }).get()
             
-            const updatedListOne = [];
-            const updatedListTwo = [];
             if(this.classList[1] == 'tierlist2') {
+                const updatedListTwo = [];
                 new_locations.forEach(element => {
-                    updatedListTwo.push(element[0].textContent.slice(0, -1));
+                    updatedListTwo.push(parseInt(element[0].classList[1]));
                 });
+                tierListTwo = updatedListTwo;
             } else {
+                const updatedListOne = [];
                 new_locations.forEach(element => {
-                    updatedListOne.push(element[0].textContent.slice(0, -1));
+                    updatedListOne.push(parseInt(element[0].classList[1]));
                 });
+                tierListOne = updatedListOne;
             }
             
+            // console.log(tierListOne, tierListTwo);
           }
 
     });

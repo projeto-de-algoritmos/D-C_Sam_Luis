@@ -6,13 +6,13 @@ $(document).ready(() => {
 	$("form").submit(function (e) {
 		const title = e.target[0].value;
 		const url = e.target[1].value;
-		
+
 		if (title.replace(/\s/g, '') != '') {
-			tierListOne.push({ title: title, url: url, id: curId });
-			tierListTwo.push({ title: title, url: url, id: curId });
-			let cardComponent = `<div class="tier-card c${curId}" draggable="true"><span style="background-image: url(${url});"></span><p>${title}</p><span onClick="deleteCard(${curId})">x</span></div>`;
+			tierListOne.push(curId);
+			tierListTwo.push(curId);
+			let cardComponent = `<div class="tier-card ${curId}" draggable="true"><span style="background-image: url(${url});"></span><p>${title}</p><span onClick="deleteCard(${curId})">x</span></div>`;
 			$(".tierlist").append(cardComponent);
-			
+
 			setupDragAndDrop(curId);
 		}
 
@@ -23,56 +23,21 @@ $(document).ready(() => {
 	});
 });
 
+function compare() {
+	const listTwoValues = [];
+	const numberOfElements = tierListOne.length;
+	let listOneMap = {};
 
-
-
-
-
-
-/*
-var tierListOne = [];
-var tierListTwo = [];
-var curId = 0;
-
-$(document).ready(() => {
-	$("form").submit(function(e) {
-		const title = e.target[0].value;
-		const url = e.target[1].value;
-
-		if(title.replace(/\s/g, '') != '') {
-			tierListOne.push({title: title, url:url, id: curId});
-			tierListTwo.push({title: title, url:url, id: curId});
-
-			$(".tierlist").append(`<div id="${curId}" class="tier-card"><span style="background-image: url(${url});"></span><p>${title}</p></div>`);
-		}
-		curId += 1;
-		this.reset();
-
-		e.preventDefault();
+	tierListOne.forEach((element, index) => {
+		listOneMap[element] = index;
 	});
-});
 
-function deleteCard(id) {
-	$(`#${id}`).remove();
-
-	tierListOne.splice(tierListOne.findIndex(element => return element.id == id}), 1);
-	tierListTwo.splice(tierListTwo.findIndex(element => return element.id == id}), 1);
-}*/
-
-/*
-$(document).ready(() => {
-	$("form").submit(function(e) {
-		const title = e.target[0].value;
-		const url = e.target[1].value;
-
-		if(title.replace(/\s/g, '') != '') {
-			tierListOne.push({title: title, url:url, id: tierListOne.length});
-			tierListTwo.push({title: title, url:url, id: tierListTwo.length});
-
-			$(".tierlist").append(`<div class="tier-card"><span style="background-image: url(${url});"></span><p>${title}</p></div>`);
-		}
-		this.reset();
-
-		e.preventDefault();
+	tierListTwo.forEach((element, index) => {
+		listTwoValues.push(listOneMap[element]);
 	});
-});*/
+
+	const maxInversions = ((numberOfElements * (numberOfElements - 1)) / 2);
+	const inversions = sortAndCount({array: listTwoValues, count: 0})
+	const listDifference = (( 1 - (inversions / maxInversions)) * 100.0);
+
+}
