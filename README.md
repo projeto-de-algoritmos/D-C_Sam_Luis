@@ -1,4 +1,4 @@
-# Tier List Comparator
+# [Tier List Comparator](https://projeto-de-algoritmos.github.io/D-C_Sam_Luis/)
 
 **Número da Lista**: 4<br>
 **Conteúdo da Disciplina**: D&C<br>
@@ -13,7 +13,9 @@
 Tier List Comparator é um comparador de tier lists, comparando as posições dos elementos em ambas e dando um percentual de compatibilidade entre elas em razão do número de inversões.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![](assets/screenshot1.png)
+![](assets/screenshot2.png)
+![](assets/screenshot3.png)
 
 ## Instalação 
 **Linguagem**: Javascript<br>
@@ -25,6 +27,8 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 Ou use qualquer servidor http de sua preferência.
 
 - Em seguida, através de um navegador, acesse o endereço localhost:8080.
+
+Ou [clique aqui](https://projeto-de-algoritmos.github.io/D-C_Sam_Luis/) para acessar o deploy.
 
 ## Uso 
 - Para adicionar elementos na tier list, insira o título do que deseja adicionar e a URL de uma imagem que represente o mesmo (opcional). Em seguida, pressione Enter ou use o botão Submit.
